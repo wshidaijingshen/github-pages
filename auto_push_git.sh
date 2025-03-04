@@ -25,7 +25,7 @@ while true; do
     git add .
     
     # Commit changes with a timestamp message
-    COMMIT_MSG="$EVENTS Auto-commit at $(date '+%Y-%m-%d %H:%M:%S')"
+    COMMIT_MSG="Auto-commit at $(date '+%Y-%m-%d %H:%M:%S')"
     git commit -am "$COMMIT_MSG" || {
         echo "$(date '+%Y-%m-%d %H:%M:%S') - No changes to commit." | tee -a $LOG_FILE
         continue
